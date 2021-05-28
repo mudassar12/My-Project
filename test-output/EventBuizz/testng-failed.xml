@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [EventBuizz]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="EventBuizz.EventBuizz.utility"/>
+  </listeners>
+  <test thread-count="5" name="Demo(failed)">
+    <classes>
+      <class name="EventBuizz.EventBuizz.curiato_Demo">
+        <methods>
+          <include name="testIT"/>
+          <include name="ValidateLoginWithWrongCombination" invocation-numbers="0"/>
+          <include name="LaunchApplication"/>
+        </methods>
+      </class> <!-- EventBuizz.EventBuizz.curiato_Demo -->
+    </classes>
+  </test> <!-- Demo(failed) -->
+</suite> <!-- Failed suite [EventBuizz] -->

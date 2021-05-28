@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="EventBuizz" parallel="none" thread-count="5">
+
+	<listeners>
+		<listener class-name="EventBuizz.EventBuizz.utility" />
+	</listeners>
+	<!-- Login Test Cases -->
+	<test name="Demo" group-by-instances="false">
+		<classes>
+			<class name="EventBuizz.EventBuizz.Configuration">
+			</class>
+			<class name="EventBuizz.EventBuizz.curiato_Demo">
+			</class>
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->
+

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="8" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-04-26T12:08:57Z" name="EventBuizz" finished-at="2021-04-26T12:09:19Z" duration-ms="21567">
+    <groups>
+    </groups>
+    <test started-at="2021-04-26T12:08:57Z" name="Demo" finished-at="2021-04-26T12:09:19Z" duration-ms="21567">
+      <class name="EventBuizz.EventBuizz.curiato_Demo">
+        <test-method signature="ValidateThePageTitle()[pri:1, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68]" started-at="2021-04-26T12:08:57Z" name="ValidateThePageTitle" finished-at="2021-04-26T12:08:57Z" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateThePageTitle -->
+        <test-method is-config="true" signature="testIT(org.testng.ITestResult)[pri:0, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68]" started-at="2021-04-26T12:08:57Z" name="testIT" finished-at="2021-04-26T12:08:58Z" duration-ms="550" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidateThePageTitle status=SUCCESS method=curiato_Demo.ValidateThePageTitle()[pri:1, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIT -->
+        <test-method signature="ValidateTheFieldsHintText()[pri:2, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68]" started-at="2021-04-26T12:08:58Z" name="ValidateTheFieldsHintText" finished-at="2021-04-26T12:09:03Z" duration-ms="5145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateTheFieldsHintText -->
+        <test-method is-config="true" signature="testIT(org.testng.ITestResult)[pri:0, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68]" started-at="2021-04-26T12:09:03Z" name="testIT" finished-at="2021-04-26T12:09:03Z" duration-ms="65" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidateTheFieldsHintText status=SUCCESS method=curiato_Demo.ValidateTheFieldsHintText()[pri:2, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIT -->
+        <test-method signature="ValidateThatKeepMeSignIndex()[pri:3, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68]" started-at="2021-04-26T12:09:03Z" name="ValidateThatKeepMeSignIndex" finished-at="2021-04-26T12:09:03Z" duration-ms="68" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateThatKeepMeSignIndex -->
+        <test-method is-config="true" signature="testIT(org.testng.ITestResult)[pri:0, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68]" started-at="2021-04-26T12:09:03Z" name="testIT" finished-at="2021-04-26T12:09:03Z" duration-ms="48" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidateThatKeepMeSignIndex status=SUCCESS method=curiato_Demo.ValidateThatKeepMeSignIndex()[pri:3, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIT -->
+        <test-method signature="ValidateThatForgotPasswordIndex()[pri:4, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68]" started-at="2021-04-26T12:09:03Z" name="ValidateThatForgotPasswordIndex" finished-at="2021-04-26T12:09:03Z" duration-ms="126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateThatForgotPasswordIndex -->
+        <test-method is-config="true" signature="testIT(org.testng.ITestResult)[pri:0, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68]" started-at="2021-04-26T12:09:03Z" name="testIT" finished-at="2021-04-26T12:09:03Z" duration-ms="54" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidateThatForgotPasswordIndex status=SUCCESS method=curiato_Demo.ValidateThatForgotPasswordIndex()[pri:4, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIT -->
+        <test-method signature="ValidateThatfieldsAreNotDisorderwhenMinimizetheScreen()[pri:5, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68]" started-at="2021-04-26T12:09:03Z" name="ValidateThatfieldsAreNotDisorderwhenMinimizetheScreen" finished-at="2021-04-26T12:09:14Z" duration-ms="10647" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateThatfieldsAreNotDisorderwhenMinimizetheScreen -->
+        <test-method is-config="true" signature="testIT(org.testng.ITestResult)[pri:0, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68]" started-at="2021-04-26T12:09:14Z" name="testIT" finished-at="2021-04-26T12:09:14Z" duration-ms="42" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidateThatfieldsAreNotDisorderwhenMinimizetheScreen status=SUCCESS method=curiato_Demo.ValidateThatfieldsAreNotDisorderwhenMinimizetheScreen()[pri:5, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIT -->
+        <test-method signature="ValidateLoginWithWrongCombination(java.lang.String, java.lang.String)[pri:6, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68]" started-at="2021-04-26T12:09:14Z" name="ValidateLoginWithWrongCombination" data-provider="Authentication1" finished-at="2021-04-26T12:09:16Z" duration-ms="1725" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test@mailinator.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateLoginWithWrongCombination -->
+        <test-method is-config="true" signature="testIT(org.testng.ITestResult)[pri:0, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68]" started-at="2021-04-26T12:09:16Z" name="testIT" finished-at="2021-04-26T12:09:16Z" duration-ms="64" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidateLoginWithWrongCombination status=SUCCESS method=curiato_Demo.ValidateLoginWithWrongCombination(java.lang.String, java.lang.String)[pri:6, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIT -->
+        <test-method signature="ValidateLoginWithCorrectCombination(java.lang.String, java.lang.String)[pri:7, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68]" started-at="2021-04-26T12:09:16Z" name="ValidateLoginWithCorrectCombination" data-provider="Authentication" finished-at="2021-04-26T12:09:19Z" duration-ms="2883" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fast_mani@yahoo.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abcde12345@]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateLoginWithCorrectCombination -->
+        <test-method is-config="true" signature="testIT(org.testng.ITestResult)[pri:0, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68]" started-at="2021-04-26T12:09:19Z" name="testIT" finished-at="2021-04-26T12:09:19Z" duration-ms="57" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidateLoginWithCorrectCombination status=SUCCESS method=curiato_Demo.ValidateLoginWithCorrectCombination(java.lang.String, java.lang.String)[pri:7, instance:EventBuizz.EventBuizz.curiato_Demo@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIT -->
+      </class> <!-- EventBuizz.EventBuizz.curiato_Demo -->
+      <class name="EventBuizz.EventBuizz.Configuration">
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:EventBuizz.EventBuizz.Configuration@73ee04c8]" started-at="2021-04-26T12:08:45Z" name="LaunchApplication" finished-at="2021-04-26T12:08:57Z" duration-ms="12555" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+      </class> <!-- EventBuizz.EventBuizz.Configuration -->
+    </test> <!-- Demo -->
+  </suite> <!-- EventBuizz -->
+</testng-results>

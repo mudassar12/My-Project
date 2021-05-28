@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="EventBuizz.EventBuizz.utility"/>
+  </listeners>
+  <test parallel="none" name="DashBoard(failed)">
+    <classes>
+      <class name="EventBuizz.EventBuizz.AdminLogin">
+        <parameter name="EventName" value="First ICC event"/>
+        <methods>
+          <include name="testIT"/>
+        </methods>
+      </class> <!-- EventBuizz.EventBuizz.AdminLogin -->
+      <class name="EventBuizz.EventBuizz.EventCenterDashBoard">
+        <parameter name="EventName" value="First ICC event"/>
+        <methods>
+          <include name="EventSelect" invocation-numbers="0"/>
+          <include name="testIT"/>
+        </methods>
+      </class> <!-- EventBuizz.EventBuizz.EventCenterDashBoard -->
+      <class name="EventBuizz.EventBuizz.RegSite_generalRegSiteSettings">
+        <parameter name="EventName" value="First ICC event"/>
+        <methods>
+          <include name="testIT"/>
+          <include name="LaunchApplication"/>
+        </methods>
+      </class> <!-- EventBuizz.EventBuizz.RegSite_generalRegSiteSettings -->
+    </classes>
+  </test> <!-- DashBoard(failed) -->
+  <test parallel="none" name="Reg Site(failed)">
+    <classes>
+      <class name="EventBuizz.EventBuizz.AdminLogin">
+        <parameter name="LPassword" value="eventbuizz!2"/>
+        <parameter name="LUName" value="Eventbuizztest@gmail.com"/>
+        <methods>
+          <include name="testIT"/>
+        </methods>
+      </class> <!-- EventBuizz.EventBuizz.AdminLogin -->
+      <class name="EventBuizz.EventBuizz.EventCenterDashBoard">
+        <parameter name="LPassword" value="eventbuizz!2"/>
+        <parameter name="LUName" value="Eventbuizztest@gmail.com"/>
+        <methods>
+          <include name="testIT"/>
+        </methods>
+      </class> <!-- EventBuizz.EventBuizz.EventCenterDashBoard -->
+      <class name="EventBuizz.EventBuizz.RegSite_generalRegSiteSettings">
+        <parameter name="LPassword" value="eventbuizz!2"/>
+        <parameter name="LUName" value="Eventbuizztest@gmail.com"/>
+        <methods>
+          <include name="ValidateEnablefunctionalityShowTickets"/>
+          <include name="OpenRegistrationSiteSettings"/>
+          <include name="testIT"/>
+          <include name="ValidateTheDisablefunctionalityShowTicketLeft"/>
+          <include name="LaunchApplication"/>
+        </methods>
+      </class> <!-- EventBuizz.EventBuizz.RegSite_generalRegSiteSettings -->
+    </classes>
+  </test> <!-- Reg Site(failed) -->
+</suite> <!-- Failed suite [Suite] -->
