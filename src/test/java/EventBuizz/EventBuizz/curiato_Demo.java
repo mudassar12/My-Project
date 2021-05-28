@@ -57,6 +57,7 @@ public class curiato_Demo extends Configuration {
 		String Pplaceholder = Password.getAttribute("placeholder");
 		logger.log(LogStatus.INFO, "Find the Email Field PlaceHoolder: " + Eplaceholder);
 		logger.log(LogStatus.INFO, "Find the Email Field PlaceHoolder: " + Pplaceholder);
+		logger.log(LogStatus.INFO, "Find the Email Field PlaceHoolder: " + Pplaceholder);
 		assertEquals(EmailHintText, Eplaceholder);
 		assertEquals(PasswordHintText, Pplaceholder);
 		// System.out.print("Password tab Index "+ Password.getAttribute("tabindex"));
