@@ -176,9 +176,24 @@ public class curiato_Demo extends Configuration {
 		//Assert.assertEquals(ExpectedResult,errorMessage.getText() );
 		
 		logger.log(LogStatus.PASS, "Test case Pass: User signs in successfully and is navigated to a different URL");
-		
+	
 	}
-
+	
+	
+	
+	/*@Test(priority = 5)
+	public void ValidatetheMovieRating() throws InterruptedException {
+		Thread.sleep(10000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,2000)", "");
+		WebElement link=this.GemovieLink();
+		link.click();
+		
+		WebElement Rating=this.GemovieRating();
+		
+		String GetText=Rating.getText();
+		System.out.print("Link Text:"+ GetText);
+	}*/
 	
 	/*@Test(priority = 5)
 	
@@ -196,6 +211,20 @@ public class curiato_Demo extends Configuration {
 		
 		
 	}*/
+	public WebElement GemovieRating() {
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebElement ErrorMessage=driver.findElement(By.cssSelector("#__next > main > div > section.ipc-page-background.ipc-page-background--base.TitlePage__StyledPageBackground-wzlr49-0.dDUGgO > section > div:nth-child(4) > section > section > div.TitleBlock__Container-sc-1nlhx7j-0.hglRHk > div.RatingBar__RatingContainer-sc-1aaz4f-0.hxsvIz.TitleBlock__HideableRatingBar-sc-1nlhx7j-4.bhTVMj > div > div:nth-child(1) > a > div > div > div.AggregateRatingButton__ContentWrap-sc-1il8omz-0.cMcGnJ > div.AggregateRatingButton__Rating-sc-1il8omz-2.ckpPOV > span.AggregateRatingButton__RatingScore-sc-1il8omz-1.fhMjqK"));
+		
+		return ErrorMessage;
+	}
+	
+	public WebElement GemovieLink() {
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebElement ErrorMessage=driver.findElement(By.xpath("//*[@id=\"__next\"]/main/div[2]/div[3]/div[6]/section/div/div/div/div[2]/div/div[2]/div[3]/div[1]/a/div"));
+		
+		return ErrorMessage;
+	}
+	
 	
 	public WebElement GetLoginErrorMessage1() {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

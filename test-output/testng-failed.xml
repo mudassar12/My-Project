@@ -8,8 +8,8 @@
     <classes>
       <class name="EventBuizz.EventBuizz.curiato_Demo">
         <methods>
+          <include name="ValidatetheMovieRating"/>
           <include name="testIT"/>
-          <include name="ValidateLoginWithWrongCombination" invocation-numbers="0"/>
           <include name="LaunchApplication"/>
         </methods>
       </class> <!-- EventBuizz.EventBuizz.curiato_Demo -->
