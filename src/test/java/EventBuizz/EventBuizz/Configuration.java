@@ -24,7 +24,9 @@ public class Configuration {
   @BeforeSuite
   public void LaunchApplication() {
 	  
-	 System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\\\chromedriver.exe");
+	// System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\\\chromedriver.exe");
+	  //serever configurations
+	  System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
 	 //C:\chromedriver_win32
 			driver = new ChromeDriver();
 			// driver=new FirefoxDriver();
