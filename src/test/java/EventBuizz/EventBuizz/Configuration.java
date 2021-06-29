@@ -1,5 +1,5 @@
 package EventBuizz.EventBuizz;
-
+import java.lang.*;
 import java.io.File;
 
 import java.util.concurrent.TimeUnit;
@@ -10,7 +10,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-import java.lang.*;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
