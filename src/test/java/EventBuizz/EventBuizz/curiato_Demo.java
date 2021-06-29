@@ -2,7 +2,7 @@ package EventBuizz.EventBuizz;
 
 import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertEquals;
-
+import java.lang.*;
 import java.io.File;
 import java.sql.Date;
 import java.sql.Time;
@@ -170,6 +170,7 @@ public class curiato_Demo extends Configuration {
 		logger.log(LogStatus.INFO, "'Click On The Login Button ");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		WebElement errorMessage=GetLoginErrorMessage1();
+		System.out.println("error message text"+errorMessage.getText());
 		System.out.println("error message text"+errorMessage.getText());
 		//errorMessage.click();
 		assertTrue(errorMessage.isDisplayed());
