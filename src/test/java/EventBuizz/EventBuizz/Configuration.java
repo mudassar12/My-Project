@@ -18,48 +18,47 @@ import com.relevantcodes.extentreports.LogStatus;
 public class Configuration {
 	public static WebDriver driver;
 	public static ExtentReports report;
-	 public static ExtentTest logger;
-	
-	
-  @BeforeSuite
-  public void LaunchApplication() {
-	  
-	// System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\\\chromedriver.exe");
-	  //serever configurations
-	  System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
-	 //C:\chromedriver_win32
-			driver = new ChromeDriver();
-			// driver=new FirefoxDriver();
-			// 
-			 //driver = new FirefoxDriver();
-			 driver.manage().window().maximize();
-			//driver.get("https://my.eventbuizz.com/_admin");
-			// driver.get("https://www.curiato.com/");
-			 driver.get("https://consult.attendanywhere.com/login");
-			 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			 
-			//logger.log(LogStatus.INFO, "Application is up and running");
-			 ExtentReport ();
+	public static ExtentTest logger;
 
-			// driver.get("https://www.seleniumeasy.com/jenkins-tutorials");
-		 }
-  public void ExtentReport () {
-		 
+
+	@BeforeSuite
+	public void LaunchApplication() {
+
+		//System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\\\chromedriver.exe");
+		//serever configurations
+		//System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+		//driver = new ChromeDriver();
+		 driver=new FirefoxDriver();
+		// 
+		//driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		//driver.get("https://my.eventbuizz.com/_admin");
+		// driver.get("https://www.curiato.com/");
+		//driver.get("https://consult.attendanywhere.com/login");
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+		//logger.log(LogStatus.INFO, "Application is up and running");
+		ExtentReport ();
+
+		// driver.get("https://www.seleniumeasy.com/jenkins-tutorials");
+	}
+	public void ExtentReport () {
+
 		// report=new ExtentReports("C:\\Report\\LearnAutomation.html");
-	// report=new ExtentReports("C:\\Report\\LearnAutomation.html");
-	 String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath() + "/target//surefire-reports//extent-Report/";
-	 //File  destFile = new File((String) reportDirectory+"/ExtentReport"+".html"); 
-	 report=new ExtentReports( reportDirectory+"/EventBuizz-AuotmationReport"+".html"); 
-		
-		 
+		// report=new ExtentReports("C:\\Report\\LearnAutomation.html");
+		String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath() + "/target//surefire-reports//extent-Report/";
+		//File  destFile = new File((String) reportDirectory+"/ExtentReport"+".html"); 
+		report=new ExtentReports( reportDirectory+"/EventBuizz-AuotmationReport"+".html"); 
+
+
 		/* @AfterSuite
-		 
+
 		 public void Aftertest() {
 				driver.quit();
-			 
+
 		 }*/
-}
-  
-  
-  
+	}
+
+
+
 }

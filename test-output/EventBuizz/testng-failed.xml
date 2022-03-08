@@ -4,15 +4,13 @@
   <listeners>
     <listener class-name="EventBuizz.EventBuizz.utility"/>
   </listeners>
-  <test thread-count="5" name="Demo(failed)">
+  <test thread-count="5" name="Api Automation(failed)">
     <classes>
-      <class name="EventBuizz.EventBuizz.curiato_Demo">
+      <class name="EventBuizz.EventBuizz.MyAPiAutomation">
         <methods>
-          <include name="ValidatetheMovieRating"/>
-          <include name="testIT"/>
-          <include name="LaunchApplication"/>
+          <include name="WeatherMessageBody"/>
         </methods>
-      </class> <!-- EventBuizz.EventBuizz.curiato_Demo -->
+      </class> <!-- EventBuizz.EventBuizz.MyAPiAutomation -->
     </classes>
-  </test> <!-- Demo(failed) -->
+  </test> <!-- Api Automation(failed) -->
 </suite> <!-- Failed suite [EventBuizz] -->

@@ -6,12 +6,11 @@
 		<listener class-name="EventBuizz.EventBuizz.utility" />
 	</listeners>
 	<!-- Login Test Cases -->
-	<test name="Demo" group-by-instances="false">
+	<test name="Api Automation" group-by-instances="false">
 		<classes>
-			<class name="EventBuizz.EventBuizz.Configuration">
-			</class>
-			<class name="EventBuizz.EventBuizz.curiato_Demo">
-			</class>
+		<class name="EventBuizz.EventBuizz.MyAPiAutomation">
+      </class>
+			
 		</classes>
 	</test>
 

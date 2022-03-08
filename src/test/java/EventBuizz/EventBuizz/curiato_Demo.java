@@ -1,5 +1,4 @@
 package EventBuizz.EventBuizz;
-import java.lang.*;
 import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertEquals;
 
@@ -7,6 +6,7 @@ import java.io.File;
 import java.sql.Date;
 import java.sql.Time;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Point;
@@ -29,7 +29,6 @@ import com.relevantcodes.extentreports.LogStatus;
 import junit.framework.Assert;
 
 public class curiato_Demo extends Configuration {
-
 	@Test(priority = 1)
 	public void ValidateThePageTitle() {
 		String expectedresult = "Video Call Management";
@@ -42,7 +41,6 @@ public class curiato_Demo extends Configuration {
 		// System.out.print("Link Text:"+ title);
 		Assert.assertTrue(title.contains("Video Call Management"));
 		logger.log(LogStatus.PASS, "Test Case Passed : when user hit the url Then Login page Opened");
-
 	}
 
 	@Test(priority = 2)
@@ -179,6 +177,10 @@ public class curiato_Demo extends Configuration {
 		logger.log(LogStatus.PASS, "Test case Pass: User signs in successfully and is navigated to a different URL");
 	
 	}
+	
+	
+	
+	
 	
 	
 	

@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content passed suite-EventBuizz">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-EventBuizz" title="EventBuizz.EventBuizz.curiato_Demo" class="method navigator-link" hash-for-method="ValidatetheMovieRating">ValidatetheMovieRating</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-EventBuizz" title="EventBuizz.EventBuizz.MyAPiAutomation" class="method navigator-link" hash-for-method="GetBooks">GetBooks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EventBuizz" title="EventBuizz.EventBuizz.MyAPiAutomation" class="method navigator-link" hash-for-method="GetBooks1">GetBooks1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-EventBuizz -->
@@ -120,14 +125,21 @@
           <div class="suite-EventBuizz-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">EventBuizz.EventBuizz.curiato_Demo</span>
+              <span class="class-name">EventBuizz.EventBuizz.MyAPiAutomation</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ValidatetheMovieRating">
-                  </a> <!-- ValidatetheMovieRating -->
-                  <span class="method-name">ValidatetheMovieRating</span>
+                  <a name="GetBooks">
+                  </a> <!-- GetBooks -->
+                  <span class="method-name">GetBooks</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="GetBooks1">
+                  </a> <!-- GetBooks1 -->
+                  <span class="method-name">GetBooks1</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -145,12 +157,11 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;EventBuizz.EventBuizz.utility&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Demo&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Api Automation&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;EventBuizz.EventBuizz.Configuration&quot;/&gt;
-      &lt;class name=&quot;EventBuizz.EventBuizz.curiato_Demo&quot;/&gt;
+      &lt;class name=&quot;EventBuizz.EventBuizz.MyAPiAutomation&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Demo --&gt;
+  &lt;/test&gt; &lt;!-- Api Automation --&gt;
 &lt;/suite&gt; &lt;!-- EventBuizz --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -162,7 +173,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Demo (2 classes)</span>
+                <span class="test-name">Api Automation (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -188,16 +199,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ValidatetheMovieRating')
-data.setCell(0, 2, 'EventBuizz.EventBuizz.curiato_Demo')
-data.setCell(0, 3, 35159);
+data.setCell(0, 1, 'GetBooks')
+data.setCell(0, 2, 'EventBuizz.EventBuizz.MyAPiAutomation')
+data.setCell(0, 3, 6198);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'GetBooks1')
+data.setCell(1, 2, 'EventBuizz.EventBuizz.MyAPiAutomation')
+data.setCell(1, 3, 797);
 window.suiteTableData['EventBuizz']= { tableData: data, tableDiv: 'times-div-EventBuizz'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 35 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-EventBuizz">
               </div> <!-- times-div-EventBuizz -->
             </div> <!-- times-div -->
@@ -212,16 +227,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-EventBuizz" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">EventBuizz.EventBuizz.curiato_Demo</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">LaunchApplication</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-EventBuizz" class="panel">
@@ -230,22 +238,15 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">EventBuizz.EventBuizz.Configuration</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">LaunchApplication</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">EventBuizz.EventBuizz.curiato_Demo</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">EventBuizz.EventBuizz.MyAPiAutomation</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">ValidatetheMovieRating</span>
-                <span class="method-start">27115 ms</span>
+                <span class="method-name">GetBooks</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">testIT([TestResult name=ValidatetheMovieRating status=SUCCESS method=curiato_Demo.ValidatetheMovieRating()[...)</span>
-                <span class="method-start">62276 ms</span>
-              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">GetBooks1</span>
+                <span class="method-start">6206 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
