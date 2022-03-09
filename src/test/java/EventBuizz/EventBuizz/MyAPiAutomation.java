@@ -7,8 +7,11 @@ import java.util.logging.Filter;
 import java.io.Externalizable;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
+import org.hamcrest.collection.HasItemInArray;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+
 import io.restassured.internal.support.Prettifier;
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.*;
@@ -21,7 +24,9 @@ import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.http.Method;
 import static io.restassured.matcher.RestAssuredMatchers.*;
-import static org.hamcrest.Matcher.*;
+import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.is;
+
 public class MyAPiAutomation {
 
 	@Test(priority = 1)
@@ -55,8 +60,7 @@ public class MyAPiAutomation {
 			  System.out.println("Get Body as string"+ res.getBody().asString());
 			  System.out.println("Get status"+ res.getStatusCode());
 			  System.out.println("Get status"+ res.getHeader("Content-Type"));
-			  System.out.println("Get status"+ res.getHeader("Content-Type"));
-			  System.out.println("Get status"+ res.getHeader("Content-Type"));
+		
 	/*	 Response res1= 
 		  
 		  given(). contentType("application/json").accept("application/json")
@@ -154,10 +158,19 @@ public class MyAPiAutomation {
 		
 	}*/
 	
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void GetBooks1() throws JSONException, InterruptedException {
 		
 		given(). contentType("application/json").accept("application/json").when() .get
 		("https://reqres.in/api/users?page=2").then().statusCode(200).contentType(ContentType.JSON).log().all();
+	}
+	
+	@Test(priority = 3)
+	public void APiSutomation() throws JSONException, InterruptedException {
+		
+	given(). contentType("application/json").accept("application/json").when() .get
+		("https://reqres.in/api/users?page=2").then().statusCode(200).contentType(ContentType.JSON).
+		body("data.first_name",hasItem("Michael") );
+
 	}
 }

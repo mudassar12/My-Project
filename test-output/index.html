@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +100,11 @@
                       <a href="#" panel-name="suite-EventBuizz" class="show-methods passed suite-EventBuizz"> (show)</a> <!-- show-methods passed suite-EventBuizz -->
                     </span>
                     <div class="method-list-content passed suite-EventBuizz">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EventBuizz" title="EventBuizz.EventBuizz.MyAPiAutomation" class="method navigator-link" hash-for-method="APiSutomation">APiSutomation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-EventBuizz" title="EventBuizz.EventBuizz.MyAPiAutomation" class="method navigator-link" hash-for-method="GetBooks">GetBooks</a> <!-- method navigator-link -->
@@ -128,6 +133,13 @@
               <span class="class-name">EventBuizz.EventBuizz.MyAPiAutomation</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="APiSutomation">
+                  </a> <!-- APiSutomation -->
+                  <span class="method-name">APiSutomation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="GetBooks">
@@ -199,15 +211,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'GetBooks')
 data.setCell(0, 2, 'EventBuizz.EventBuizz.MyAPiAutomation')
-data.setCell(0, 3, 6198);
+data.setCell(0, 3, 4252);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'GetBooks1')
+data.setCell(1, 1, 'APiSutomation')
 data.setCell(1, 2, 'EventBuizz.EventBuizz.MyAPiAutomation')
-data.setCell(1, 3, 797);
+data.setCell(1, 3, 1831);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'GetBooks1')
+data.setCell(2, 2, 'EventBuizz.EventBuizz.MyAPiAutomation')
+data.setCell(2, 3, 791);
 window.suiteTableData['EventBuizz']= { tableData: data, tableDiv: 'times-div-EventBuizz'}
 return data;
 }
@@ -245,7 +261,11 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">GetBooks1</span>
-                <span class="method-start">6206 ms</span>
+                <span class="method-start">4266 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">APiSutomation</span>
+                <span class="method-start">5065 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
