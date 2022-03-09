@@ -56,6 +56,7 @@ public class MyAPiAutomation {
 			  System.out.println("Get status"+ res.getStatusCode());
 			  System.out.println("Get status"+ res.getHeader("Content-Type"));
 			  System.out.println("Get status"+ res.getHeader("Content-Type"));
+			  System.out.println("Get status"+ res.getHeader("Content-Type"));
 	/*	 Response res1= 
 		  
 		  given(). contentType("application/json").accept("application/json")
