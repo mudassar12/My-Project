@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ReconStream]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="EventBuizz.EventBuizz.utility"/>
+  </listeners>
+  <test thread-count="5" name="ATM Management(failed)">
+    <classes>
+      <class name="TimeStreamGroup.Reconstream.Administration_ATM">
+        <methods>
+          <include name="testIT"/>
+          <include name="VerifyADDATMScreenOpened"/>
+          <include name="LaunchApplication"/>
+        </methods>
+      </class> <!-- TimeStreamGroup.Reconstream.Administration_ATM -->
+    </classes>
+  </test> <!-- ATM Management(failed) -->
+</suite> <!-- Failed suite [ReconStream] -->

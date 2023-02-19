@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ReconStream" parallel="none" thread-count="5">
+
+<listeners>
+    <listener class-name="EventBuizz.EventBuizz.utility" />
+  </listeners>
+  <!-- Login Test Cases -->
+  <test name=" Login" group-by-instances="false">
+    <classes>
+     <class name="EventBuizz.EventBuizz.Configuration">
+      </class>
+      <class name="TimeStreamGroup.Reconstream.Login"> 
+      <!-- Login Details -->
+                 <parameter name="UName" value="shahid.suri@timestreamgroup.com" />
+				<parameter name="Password" value="oneteam!" />
+				 <!-- Login Class -->
+        </class>
+    </classes>
+	</test> <!-- Test -->
+	
+	<test name="ATM Management" group-by-instances="false">
+    <classes>
+      <class name="TimeStreamGroup.Reconstream.Administration_ATM"> 
+        </class>
+    </classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
+

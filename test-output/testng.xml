@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="EventBuizz" parallel="none" thread-count="5">
+
+<listeners>
+    <listener class-name="EventBuizz.EventBuizz.utility" />
+  </listeners>
+  <!-- Login Test Cases -->
+  <test name="EventBuizz Admin Login" group-by-instances="false">
+    <classes>
+     <class name="EventBuizz.EventBuizz.Configuration">
+      </class>
+      <class name="EventBuizz.EventBuizz.AdminLogin"> 
+      <!-- Login Details -->
+                 <parameter name="UName" value="mmu@eventbuizz.com" />
+				<parameter name="Password" value="1234567" />
+				 <!-- Login Class -->
+        </class>
+    </classes>
+  </test> 
+  <test name="DashBaord" group-by-instances="false">
+   <classes>
+
+   <class name="EventBuizz.EventBuizz.EventCenterDashBoard">
+      <parameter name="EventName" value="pak vs new zealand" />
+    </class>
+   </classes>
+  </test>
+  
+  <test name="Reg Site" group-by-instances="false">
+		<classes>
+			<class name="EventBuizz.EventBuizz.RegSite_generalRegSiteSettings">
+			<!-- LinkedIn  Parameters -->
+					   <parameter name="LUName" value="Eventbuizztest@gmail.com" />
+					   <parameter name="LPassword" value="eventbuizz!2" />
+			</class>
+		</classes>
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
+
