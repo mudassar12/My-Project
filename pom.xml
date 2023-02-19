@@ -154,7 +154,7 @@
 				<configuration>
 					<printSummary>true</printSummary>
 					<suiteXmlFiles>
-						<suiteXmlFile>Demo.xml</suiteXmlFile>
+						<suiteXmlFile>ReconStream.xml</suiteXmlFile>
 						<!-- <suiteXmlFile>Demo.xml</suiteXmlFile> -->
 					</suiteXmlFiles>
 				</configuration>

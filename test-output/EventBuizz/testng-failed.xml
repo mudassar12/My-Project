@@ -4,13 +4,17 @@
   <listeners>
     <listener class-name="EventBuizz.EventBuizz.utility"/>
   </listeners>
-  <test thread-count="5" name="Api Automation(failed)">
+  <test thread-count="5" name=" Login(failed)">
     <classes>
-      <class name="EventBuizz.EventBuizz.MyAPiAutomation">
+      <class name="TimeStreamGroup.Reconstream.Login">
+        <parameter name="UName" value="mmu@eventbuizz.com"/>
+        <parameter name="Password" value="1234567"/>
         <methods>
-          <include name="WeatherMessageBody"/>
+          <include name="testIT"/>
+          <include name="ValidateThatSignInHeadingPersistOnTheLoginPage"/>
+          <include name="LaunchApplication"/>
         </methods>
-      </class> <!-- EventBuizz.EventBuizz.MyAPiAutomation -->
+      </class> <!-- TimeStreamGroup.Reconstream.Login -->
     </classes>
-  </test> <!-- Api Automation(failed) -->
+  </test> <!--  Login(failed) -->
 </suite> <!-- Failed suite [EventBuizz] -->

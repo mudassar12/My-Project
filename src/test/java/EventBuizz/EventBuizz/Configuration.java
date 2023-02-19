@@ -35,6 +35,9 @@ public class Configuration {
 		//driver.get("https://my.eventbuizz.com/_admin");
 		// driver.get("https://www.curiato.com/");
 		//driver.get("https://consult.attendanywhere.com/login");
+		//driver.get("https://reconstream-qa.timestreamgroup.com/login");
+		//driver.get("https://reconstream-int.timestreamgroup.com/login");
+		driver.get("https://reconstream.timestreamgroup.com/login");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		//logger.log(LogStatus.INFO, "Application is up and running");
@@ -48,17 +51,17 @@ public class Configuration {
 		// report=new ExtentReports("C:\\Report\\LearnAutomation.html");
 		String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath() + "/target//surefire-reports//extent-Report/";
 		//File  destFile = new File((String) reportDirectory+"/ExtentReport"+".html"); 
-		report=new ExtentReports( reportDirectory+"/EventBuizz-AuotmationReport"+".html"); 
+		report=new ExtentReports( reportDirectory+"/ReconStream-AuotmationReport"+".html"); 
 
 
-		/* @AfterSuite
-
-		 public void Aftertest() {
-				driver.quit();
-
-		 }*/
+	 
 	}
 
+	/*@AfterSuite
 
+	 public void Aftertest() {
+			driver.quit();
+
+	 }*/
 
 }

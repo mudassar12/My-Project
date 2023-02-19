@@ -29,6 +29,7 @@ public class AdminLogin extends Configuration {
 		String title = driver.getTitle();
 		//title="abc3433";
 		// System.out.print("Link Text:"+ title);
+		
 		Assert.assertTrue(title.contains("EventBuizz"));
 		logger.log(LogStatus.PASS, "Title verified");
 	}
