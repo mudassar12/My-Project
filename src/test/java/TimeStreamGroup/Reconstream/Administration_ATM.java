@@ -153,7 +153,7 @@ public class Administration_ATM extends Configuration {
 		WebElement Latitude=GeLatitudeField();
 		logger.log(LogStatus.PASS, "'Input the 'LATITUDE'"+this.Latitude);
 		this.SetLatitude();
-
+//
 		 Assert.assertTrue(Latitude.isEnabled());
 		 logger.log(LogStatus.PASS, "Validate that User can enter Latitude: ");
 	}
