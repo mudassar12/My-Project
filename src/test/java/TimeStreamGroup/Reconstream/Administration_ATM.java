@@ -157,15 +157,7 @@ public class Administration_ATM extends Configuration {
 		 Assert.assertTrue(Latitude.isEnabled());
 		 logger.log(LogStatus.PASS, "Validate that User can enter Latitude: ");
 	}
-	@Test(priority =11) public void VerifyThatLongitudeIsDisplayed() throws InterruptedException {
-		logger = report.startTest("Verify that 'LATITUDE' Field is displayed");
-		WebElement Latitude=GeLatitudeField();
-		logger.log(LogStatus.PASS, "'Input the 'LATITUDE'"+this.Latitude);
-		this.SetLatitude();
-
-		 Assert.assertTrue(Latitude.isEnabled());
-		 logger.log(LogStatus.PASS, "Validate that User can enter Latitude: ");
-	}
+	
 	public void SetLatitude() {
 		WebElement latitude= this.GeLatitudeField();
 		latitude.clear();
