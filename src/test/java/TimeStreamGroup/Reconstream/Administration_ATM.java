@@ -19,7 +19,7 @@ import EventBuizz.EventBuizz.utility;
 import junit.framework.Assert;
 
 public class Administration_ATM extends Configuration {
-	public String TerminalID="04333";
+	public String TerminalID="14333";
 	public String CIT_defined_Terminal_id="CIT Field";
 	public String DeviceLocation="main Gulberg Lahore";
 	public String Region;
@@ -39,6 +39,7 @@ public class Administration_ATM extends Configuration {
 		 logger.log(LogStatus.INFO, "Click on the Adminstration");
 			Assert.assertTrue(GetAdministration.isDisplayed());
        // Scrolling down the page till the element is found		
+			 //Scrolling down the page till the element is found
 			logger.log(LogStatus.PASS, "'Validate that Administration is Visible");
 		
 		
