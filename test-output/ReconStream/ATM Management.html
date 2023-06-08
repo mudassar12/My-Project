@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>ATM Management</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>10/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>14/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Feb 19 16:49:35 PKT 2023</td>
+<td>Started on:</td><td>Fri Jun 02 13:17:59 PKT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>31 seconds (31203 ms)</td>
+<tr><td>Total time:</td><td>48 seconds (48664 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -79,12 +79,12 @@ function toggleAllBoxes() {
 <td><div><pre>junit.framework.ComparisonFailure: expected:&lt;ATM Records[1]&gt; but was:&lt;ATM Records[]&gt;
 	at junit.framework.Assert.assertEquals(Assert.java:100)
 	at junit.framework.Assert.assertEquals(Assert.java:107)
-	at TimeStreamGroup.Reconstream.Administration_ATM.VerifyADDATMScreenOpened(Administration_ATM.java:82)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace475024998", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace475024998'><pre>junit.framework.ComparisonFailure: expected:&lt;ATM Records[1]&gt; but was:&lt;ATM Records[]&gt;
+	at TimeStreamGroup.Reconstream.Administration_ATM.VerifyADDATMScreenOpened(Administration_ATM.java:84)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1016090398", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1016090398'><pre>junit.framework.ComparisonFailure: expected:&lt;ATM Records[1]&gt; but was:&lt;ATM Records[]&gt;
 	at junit.framework.Assert.assertEquals(Assert.java:100)
 	at junit.framework.Assert.assertEquals(Assert.java:107)
-	at TimeStreamGroup.Reconstream.Administration_ATM.VerifyADDATMScreenOpened(Administration_ATM.java:82)
+	at TimeStreamGroup.Reconstream.Administration_ATM.VerifyADDATMScreenOpened(Administration_ATM.java:84)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -112,7 +112,85 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>2</td>
-<td>TimeStreamGroup.Reconstream.Administration_ATM@16a0ee18</td></tr>
+<td>TimeStreamGroup.Reconstream.Administration_ATM@32ee6fee</td></tr>
+<tr>
+<td title='TimeStreamGroup.Reconstream.Administration_ATM.VerifyThaATMExistInList()'><b>VerifyThaATMExistInList</b><br>Test class: TimeStreamGroup.Reconstream.Administration_ATM</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: The element with the reference 7f2c1074-4dd0-4919-b356-1344f0e7b4c8 is stale; either its node document is not the active document, or it is no longer connected to the DOM
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T18:33:54.468Z&apos;
+System info: host: &apos;DESKTOP-ECUBPED&apos;, ip: &apos;192.168.100.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 113.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230522134052, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 13196, moz:profile: C:\Users\MRMUDA~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fca48f57-f409-4c43-b466-961d045b18f9
+*** Element info: {Using=tag name, value=td}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.findElements(RemoteWebElement.java:195)
+	at org.openqa.selenium.remote.RemoteWebElement.findElementsByTagName(RemoteWebElement.java:275)
+	at org.openqa.selenium.By$ByTagName.findElements(By.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.findElements(RemoteWebElement.java:171)
+	at TimeStreamGroup.Reconstream.Administration_ATM.FindATM(Administration_ATM.java:225)
+	at TimeStreamGroup.Reconstream.Administration_ATM.VerifyThaATMExistInList(Administration_ATM.java:211)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace81505591", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace81505591'><pre>org.openqa.selenium.StaleElementReferenceException: The element with the reference 7f2c1074-4dd0-4919-b356-1344f0e7b4c8 is stale; either its node document is not the active document, or it is no longer connected to the DOM
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T18:33:54.468Z&apos;
+System info: host: &apos;DESKTOP-ECUBPED&apos;, ip: &apos;192.168.100.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 113.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230522134052, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 13196, moz:profile: C:\Users\MRMUDA~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fca48f57-f409-4c43-b466-961d045b18f9
+*** Element info: {Using=tag name, value=td}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.findElements(RemoteWebElement.java:195)
+	at org.openqa.selenium.remote.RemoteWebElement.findElementsByTagName(RemoteWebElement.java:275)
+	at org.openqa.selenium.By$ByTagName.findElements(By.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.findElements(RemoteWebElement.java:171)
+	at TimeStreamGroup.Reconstream.Administration_ATM.FindATM(Administration_ATM.java:225)
+	at TimeStreamGroup.Reconstream.Administration_ATM.VerifyThaATMExistInList(Administration_ATM.java:211)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>10</td>
+<td>TimeStreamGroup.Reconstream.Administration_ATM@32ee6fee</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -125,52 +203,72 @@ function toggleAllBoxes() {
 <td title='TimeStreamGroup.Reconstream.Administration_ATM.VerifyCITFieldIsDisplayed()'><b>VerifyCITFieldIsDisplayed</b><br>Test class: TimeStreamGroup.Reconstream.Administration_ATM</td>
 <td></td>
 <td>2</td>
-<td>TimeStreamGroup.Reconstream.Administration_ATM@16a0ee18</td></tr>
+<td>TimeStreamGroup.Reconstream.Administration_ATM@32ee6fee</td></tr>
 <tr>
 <td title='TimeStreamGroup.Reconstream.Administration_ATM.VerifyDeviceLocationIsDisplayed()'><b>VerifyDeviceLocationIsDisplayed</b><br>Test class: TimeStreamGroup.Reconstream.Administration_ATM</td>
 <td></td>
 <td>2</td>
-<td>TimeStreamGroup.Reconstream.Administration_ATM@16a0ee18</td></tr>
+<td>TimeStreamGroup.Reconstream.Administration_ATM@32ee6fee</td></tr>
 <tr>
 <td title='TimeStreamGroup.Reconstream.Administration_ATM.VerifyRegionDropDownIsDisplayed()'><b>VerifyRegionDropDownIsDisplayed</b><br>Test class: TimeStreamGroup.Reconstream.Administration_ATM</td>
 <td></td>
 <td>4</td>
-<td>TimeStreamGroup.Reconstream.Administration_ATM@16a0ee18</td></tr>
+<td>TimeStreamGroup.Reconstream.Administration_ATM@32ee6fee</td></tr>
 <tr>
 <td title='TimeStreamGroup.Reconstream.Administration_ATM.VerifyThatALLATMListIsShowing()'><b>VerifyThatALLATMListIsShowing</b><br>Test class: TimeStreamGroup.Reconstream.Administration_ATM</td>
 <td></td>
 <td>6</td>
-<td>TimeStreamGroup.Reconstream.Administration_ATM@16a0ee18</td></tr>
+<td>TimeStreamGroup.Reconstream.Administration_ATM@32ee6fee</td></tr>
 <tr>
 <td title='TimeStreamGroup.Reconstream.Administration_ATM.VerifyThatATMManagmentisVisible()'><b>VerifyThatATMManagmentisVisible</b><br>Test class: TimeStreamGroup.Reconstream.Administration_ATM</td>
 <td></td>
 <td>4</td>
-<td>TimeStreamGroup.Reconstream.Administration_ATM@16a0ee18</td></tr>
+<td>TimeStreamGroup.Reconstream.Administration_ATM@32ee6fee</td></tr>
+<tr>
+<td title='TimeStreamGroup.Reconstream.Administration_ATM.VerifyThatActiveOptionisSelectedByDefault()'><b>VerifyThatActiveOptionisSelectedByDefault</b><br>Test class: TimeStreamGroup.Reconstream.Administration_ATM</td>
+<td></td>
+<td>2</td>
+<td>TimeStreamGroup.Reconstream.Administration_ATM@32ee6fee</td></tr>
 <tr>
 <td title='TimeStreamGroup.Reconstream.Administration_ATM.VerifyThatAdministrationisVisible()'><b>VerifyThatAdministrationisVisible</b><br>Test class: TimeStreamGroup.Reconstream.Administration_ATM</td>
 <td></td>
 <td>4</td>
-<td>TimeStreamGroup.Reconstream.Administration_ATM@16a0ee18</td></tr>
+<td>TimeStreamGroup.Reconstream.Administration_ATM@32ee6fee</td></tr>
+<tr>
+<td title='TimeStreamGroup.Reconstream.Administration_ATM.VerifyThatAfterAddingtheATMUserLanonOnTHeListingScreen()'><b>VerifyThatAfterAddingtheATMUserLanonOnTHeListingScreen</b><br>Test class: TimeStreamGroup.Reconstream.Administration_ATM</td>
+<td></td>
+<td>3</td>
+<td>TimeStreamGroup.Reconstream.Administration_ATM@32ee6fee</td></tr>
 <tr>
 <td title='TimeStreamGroup.Reconstream.Administration_ATM.VerifyThatDeviceNameFieldIsdisplayed()'><b>VerifyThatDeviceNameFieldIsdisplayed</b><br>Test class: TimeStreamGroup.Reconstream.Administration_ATM</td>
 <td></td>
 <td>0</td>
-<td>TimeStreamGroup.Reconstream.Administration_ATM@16a0ee18</td></tr>
+<td>TimeStreamGroup.Reconstream.Administration_ATM@32ee6fee</td></tr>
 <tr>
 <td title='TimeStreamGroup.Reconstream.Administration_ATM.VerifyThatIpAddressFieldIsdisplayed()'><b>VerifyThatIpAddressFieldIsdisplayed</b><br>Test class: TimeStreamGroup.Reconstream.Administration_ATM</td>
 <td></td>
 <td>0</td>
-<td>TimeStreamGroup.Reconstream.Administration_ATM@16a0ee18</td></tr>
+<td>TimeStreamGroup.Reconstream.Administration_ATM@32ee6fee</td></tr>
 <tr>
 <td title='TimeStreamGroup.Reconstream.Administration_ATM.VerifyThatLatitudeFieldIsDisplayed()'><b>VerifyThatLatitudeFieldIsDisplayed</b><br>Test class: TimeStreamGroup.Reconstream.Administration_ATM</td>
 <td></td>
 <td>0</td>
-<td>TimeStreamGroup.Reconstream.Administration_ATM@16a0ee18</td></tr>
+<td>TimeStreamGroup.Reconstream.Administration_ATM@32ee6fee</td></tr>
+<tr>
+<td title='TimeStreamGroup.Reconstream.Administration_ATM.VerifyThatLongitudeFieldIsDisplayed()'><b>VerifyThatLongitudeFieldIsDisplayed</b><br>Test class: TimeStreamGroup.Reconstream.Administration_ATM</td>
+<td></td>
+<td>0</td>
+<td>TimeStreamGroup.Reconstream.Administration_ATM@32ee6fee</td></tr>
+<tr>
+<td title='TimeStreamGroup.Reconstream.Administration_ATM.VerifyThatUserSelectTheVendor()'><b>VerifyThatUserSelectTheVendor</b><br>Test class: TimeStreamGroup.Reconstream.Administration_ATM</td>
+<td></td>
+<td>0</td>
+<td>TimeStreamGroup.Reconstream.Administration_ATM@32ee6fee</td></tr>
 <tr>
 <td title='TimeStreamGroup.Reconstream.Administration_ATM.VerifyThatterminalIDIsDisplayed()'><b>VerifyThatterminalIDIsDisplayed</b><br>Test class: TimeStreamGroup.Reconstream.Administration_ATM</td>
 <td></td>
 <td>2</td>
-<td>TimeStreamGroup.Reconstream.Administration_ATM@16a0ee18</td></tr>
+<td>TimeStreamGroup.Reconstream.Administration_ATM@32ee6fee</td></tr>
 </table><p>
 </body>
 </html>

@@ -12,8 +12,8 @@
       </class>
       <class name="TimeStreamGroup.Reconstream.Login"> 
       <!-- Login Details -->
-                 <parameter name="UName" value="shahid.suri@timestreamgroup.com" />
-				<parameter name="Password" value="oneteam!" />
+                 <parameter name="UName" value="ch.mudassar.munir@gmail.com" />
+				<parameter name="Password" value="Password1!" />
 				 <!-- Login Class -->
         </class>
     </classes>

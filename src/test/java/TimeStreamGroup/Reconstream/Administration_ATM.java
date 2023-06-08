@@ -1,5 +1,7 @@
 package TimeStreamGroup.Reconstream;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -17,7 +19,7 @@ import EventBuizz.EventBuizz.utility;
 import junit.framework.Assert;
 
 public class Administration_ATM extends Configuration {
-	public String TerminalID="1111";
+	public String TerminalID="04333";
 	public String CIT_defined_Terminal_id="CIT Field";
 	public String DeviceLocation="main Gulberg Lahore";
 	public String Region;
@@ -25,7 +27,7 @@ public class Administration_ATM extends Configuration {
 	public String DeviceName="main branch";
 	public String Latitude="31°26'20.6";
 	public String Longitude="31°26'20.6";
-			
+	public String Vendor;		
 
 	@Test(priority =1) public void VerifyThatAdministrationisVisible() throws InterruptedException {
 		 logger = report.startTest("Validate that Verify Administration is Visible on the left hand side");
@@ -99,7 +101,8 @@ public class Administration_ATM extends Configuration {
 		logger = report.startTest("Verify that CIT terminal ID Field is displayed and user can enter the data in the field");
 		WebElement GetCITfield=this.GetCITField();
 		SetCITField();
-		logger.log(LogStatus.PASS, "'Input the CIT Field"+this.CIT_defined_Terminal_id);
+		//logger.log(LogStatus.PASS, "'Input the CIT Field"+this.CIT_defined_Terminal_id);
+		logger.log(LogStatus.INFO, "'Input the CIT Field"+this.CIT_defined_Terminal_id);
 		Assert.assertTrue(GetCITfield.isDisplayed());
 		logger.log(LogStatus.PASS, "'Validate that CIT Field is displayed and user can enter the CIT in the field");
      // Scrolling down the page till the element is found		
@@ -110,7 +113,8 @@ public class Administration_ATM extends Configuration {
 		logger = report.startTest("Verify that Device Location Field is displayed and user can enter the data in the field");
 		WebElement GetDLocationfield=this.GetDeviceLocationField();
 		SetDeviceLocationField();
-		logger.log(LogStatus.PASS, "'InPut the device location"+this.DeviceLocation);
+		//logger.log(LogStatus.PASS, "'InPut the device location"+this.DeviceLocation);
+		logger.log(LogStatus.INFO, "'InPut the device location"+this.DeviceLocation);
 		Assert.assertTrue(GetDLocationfield.isDisplayed());
 		logger.log(LogStatus.PASS, "'Validate that Device location field is displayed and user can enter the Device location in the field");
      // Scrolling down the page till the element is found		
@@ -151,11 +155,123 @@ public class Administration_ATM extends Configuration {
 	@Test(priority =11) public void VerifyThatLatitudeFieldIsDisplayed() throws InterruptedException {
 		logger = report.startTest("Verify that 'LATITUDE' Field is displayed");
 		WebElement Latitude=GeLatitudeField();
-		logger.log(LogStatus.PASS, "'Input the 'LATITUDE'"+this.Latitude);
+		//logger.log(LogStatus.PASS, "'Input the 'LATITUDE'"+this.Latitude);
+		logger.log(LogStatus.INFO, "'Input the 'LATITUDE'"+this.Latitude);
 		this.SetLatitude();
 
 		 Assert.assertTrue(Latitude.isEnabled());
 		 logger.log(LogStatus.PASS, "Validate that User can enter Latitude: ");
+	}
+	@Test(priority =12) public void VerifyThatLongitudeFieldIsDisplayed() throws InterruptedException {
+		logger = report.startTest("Verify that 'LONGITUDE' Field is displayed");
+		WebElement longitude=GeLONGITUDEField();
+		logger.log(LogStatus.PASS, "'Input the 'LONGITUDE'"+this.Longitude);
+		this.SetLongitude();
+
+		 Assert.assertTrue(longitude.isEnabled());
+		 logger.log(LogStatus.PASS, "Validate that User can enter LONGITUDE: ");
+	}
+	@Test(priority =13) public void VerifyThatUserSelectTheVendor() throws InterruptedException {
+		logger = report.startTest("Verify that User can select the Vendor");
+		WebElement vendorField=GetVendorField();
+		vendorField.click();
+		//logger.log(LogStatus.PASS, "click on the vendor Field for selection the values from the drop down");
+		logger.log(LogStatus.INFO, "click on the vendor Field for selection the values from the drop down");
+		WebElement vendorvalueselect=this.SelectVendorValue();
+		vendorvalueselect.click();
+		WebElement vendor=GetVendorAfterSelection();
+		logger.log(LogStatus.PASS, "Select the Vendor Values"+vendor.getText());
+		this.Vendor=vendor.getText();
+		
+		// Assert.assertTrue(longitude.isEnabled());
+		 logger.log(LogStatus.PASS, "Validate that User has selected the vendor value"+this.Vendor);
+	}
+	@Test(priority =14) public void VerifyThatActiveOptionisSelectedByDefault() throws InterruptedException {
+		logger = report.startTest("Verify that Active Option is selected By Default");
+		this.scrolldownADDATm();
+		WebElement  GetActive=GetActive();
+		Assert.assertTrue(GetActive.isSelected());
+		 logger.log(LogStatus.PASS, "Validate that Active Checkbox is already");
+	}
+	
+	@Test(priority =15) public void VerifyThatAfterAddingtheATMUserLanonOnTHeListingScreen() throws InterruptedException {
+		String ExpectedResults="All ATMs";
+		logger = report.startTest("Verify that when user press Add button then user land on the ATM listing screen");
+		WebElement  GetAddATM=GetADDATM();
+		GetAddATM.click();//click on the Add ATM button
+		Thread.sleep(1000);
+		logger.log(LogStatus.INFO, "Click on the ADD ATM button");
+		WebElement  GetALlATMLabels=GetALLATMLabel();
+		Assert.assertEquals(ExpectedResults,GetALlATMLabels.getText() );
+		 logger.log(LogStatus.PASS, "Validate that ATM has been added successfully and user land on the ATM listing screen");
+	}
+	@Test(priority =16) public void VerifyThaATMExistInList() throws InterruptedException {
+		logger = report.startTest("Verify that Latest Added ATM is showing in the ATM list");
+		//WebElement  GetAddATM=GetADDATM();
+		FindATM();
+		//Assert.assertEquals(ExpectedResults,GetALlATMLabels.getText() );
+		 logger.log(LogStatus.PASS, "Validate that ATM has been added successfully and user land on the ATM listing screen");
+	}
+	public void  FindATM() {
+		// Find the table element
+		WebElement table = driver.findElement(By.tagName("table"));
+		System.out.print("Find table");
+		// Get all the rows of the table
+		List<WebElement> rows = table.findElements(By.tagName("tr"));
+		System.out.print("Find Tr");
+		// Loop through each row and extract the data
+		for (WebElement row : rows) {
+		    // Get all the columns of the current row
+		    List<WebElement> columns = row.findElements(By.tagName("td"));
+		    
+		    // Loop through each column and extract the text value
+		    for (WebElement column : columns) {
+		        String data = column.getText();
+		    	if (column.getText().toLowerCase().contains(this.TerminalID.toLowerCase()))
+		    	{
+		    		System.out.print("terminal ID" + column.getText());
+		    	}
+		    
+		       // System.out.print(data + "\t");
+		    }
+		    //System.out.println();
+		}
+	}
+	
+	public WebElement GetVendorAfterSelection() {
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebElement ATMType= wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dropdownMenuButtonNCR")));		
+		return ATMType;
+
+	}
+	public WebElement GetADDATM() {
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebElement ATMType= wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("submit")));		
+		return ATMType;
+
+	}
+	public WebElement GetActive() {
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebElement ATMType= wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("active")));		
+		return ATMType;
+
+	}
+	public WebElement GetATMType() {
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebElement ATMType= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='atm']")));		
+		return ATMType;
+
+	}
+	public WebElement SelectVendorValue() {
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		WebElement vendorvalue= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[text()='NCR']")));		
+		return vendorvalue;
+
+	}
+	public void SetLongitude() {
+		WebElement Longitude= this.GeLONGITUDEField();
+		Longitude.clear();
+		Longitude.sendKeys(this.Longitude);
 	}
 	
 	public void SetLatitude() {
@@ -172,6 +288,12 @@ public class Administration_ATM extends Configuration {
 		WebElement Ipaddress= this.GetIPAddressField();
 		Ipaddress.clear();
 		Ipaddress.sendKeys(this.IPAddress);
+	}
+	public WebElement GeLONGITUDEField() {
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebElement longitude= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Enter Longitude']")));		
+		return longitude;
+
 	}
 	public WebElement GeLatitudeField() {
 		WebDriverWait wait = new WebDriverWait(driver,10);
@@ -199,6 +321,12 @@ public class Administration_ATM extends Configuration {
 		System.out.println("Region valyesText"+Getregion.getText());
 		this.Region=Getregion.getText();
 		return Getregion ;
+	}
+	public WebElement GetVendorField() {
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebElement GetVendor= wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dropdownMenuButtonSelect Vendor")));
+		return GetVendor;
+		
 	}
 
 	public void GeTRegionDropdown() throws InterruptedException {
@@ -265,7 +393,7 @@ public class Administration_ATM extends Configuration {
 	public WebElement GetAddATMBTN() {
 		WebDriverWait wait = new WebDriverWait(driver,20);
 		WebElement GetAddBTN= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]//*[text()='Add ATM']")));
-				
+		
 		return GetAddBTN;
 
 	}
@@ -292,6 +420,17 @@ public class Administration_ATM extends Configuration {
 		return GetAdministration;
 
 	}
+	public void scrolldownADDATm() throws InterruptedException{
+		Thread.sleep(2000);
+		 //  JavascriptExecutor js = (JavascriptExecutor) driver;
+	       //js.executeScript("window.scrollBy(0,350)", "");
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebElement Element =driver.findElement(By.name("submit")); //driver.findElement(By.xpath("//*[@id=\"root\"]//*[text()='Transactions']"));
+		//*[@id=\"root\"]//*[text()='Branch']
+        // Scrolling down the page till the element is found		
+        js.executeScript("arguments[0].scrollIntoView();", Element);
+
+	}
 	
 	public void scrolldown() throws InterruptedException{
 		Thread.sleep(2000);
@@ -304,6 +443,16 @@ public class Administration_ATM extends Configuration {
         js.executeScript("arguments[0].scrollIntoView();", Element);
 
 	}
+	
+	/*public int Random() {
+		int min = 50; // Minimum value of range
+	      int max = 100; // Maximum value of range
+	      // Print the min and max  
+	      System.out.println("Random value in int from "+ min + " to " + max + ":");
+	      // Generate random int value from min to max
+	      int random_int = (int)Math.floor(Math.random() * (max - min + 1) + min);
+	      return
+	}*/
 	@AfterMethod
 	public void testIT(ITestResult result) throws Exception {
 		if (ITestResult.FAILURE == result.getStatus()) {

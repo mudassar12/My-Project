@@ -196,7 +196,7 @@ public class Login extends Configuration {
 	@DataProvider(name = "Authentication")
 	public static Object[][] credentials() {
 
-		return new Object[][] { { "Test@mailinator.com", "test" },{"mudassar.munir@timestreamgroup.com", "test"},{"Test@mailinator.com", "Password1!"} };
+		return new Object[][] { { "Test@mailinator.com", "test" },{"ch.mudassar.munir@gmail.com", "test"},{"Test@mailinator.com", "Password1!"} };
 	}
 
 	@Test(priority = 13, dataProvider = "Authentication")
@@ -205,18 +205,20 @@ public class Login extends Configuration {
 		logger = report.startTest("Validate That when user send incorrect password , system shows correct error message and User remains on the login page");
 		String ExpectedResult="Invalid Username or Password";
 		
-		SetUserName(UName);
 		logger.log(LogStatus.INFO, "'Enter User Name = "+UName);
+		SetUserName(UName);
+		//System.out.println("UName"+UName);
 		SetPassword(Password);
 		logger.log(LogStatus.INFO, "'Enter Password = "+Password);
+		//System.out.println("UName"+Password);
 		Thread.sleep(1000);
-		this.GetSignInButton();
+		//this.GetSignInButton();
 		WebElement loginBtn=this.GetSignInButton();
 		loginBtn.click();
 		logger.log(LogStatus.INFO, "'Click On The Login Button ");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement errorMessage=GetErrorMessage();
-		//System.out.println("error message text"+errorMessage.getText());
+		System.out.println("error message text"+errorMessage.getText());
 		Assert.assertEquals(ExpectedResult,errorMessage.getText() );
 		
 		logger.log(LogStatus.PASS, "Test case Pass:When User enters wrong combination of lgin then Correct Error message is displayed on the Login page");
@@ -281,7 +283,8 @@ public class Login extends Configuration {
 
 	}
 	public WebElement GetErrorMessage() {
-		WebElement SignBtn = driver.findElement(By.xpath("//*[@id=\"add-notes\"]//*[text()='Invalid Username or Password']"));
+		WebElement SignBtn = driver.findElement(By.xpath("//*[@id='add-notes']//*[text()='Invalid username or password']"));
+		
 		//*[@id="add-notes"]//*[text(),'']
 
 		return SignBtn;

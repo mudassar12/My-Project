@@ -35,9 +35,9 @@ public class Configuration {
 		//driver.get("https://my.eventbuizz.com/_admin");
 		// driver.get("https://www.curiato.com/");
 		//driver.get("https://consult.attendanywhere.com/login");
-		//driver.get("https://reconstream-qa.timestreamgroup.com/login");
+		driver.get("https://reconstream-qa.timestreamgroup.com/login");
 		//driver.get("https://reconstream-int.timestreamgroup.com/login");
-		driver.get("https://reconstream.timestreamgroup.com/login");
+		//driver.get("https://reconstream.timestreamgroup.com/login");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		//logger.log(LogStatus.INFO, "Application is up and running");
